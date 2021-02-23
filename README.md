@@ -1,5 +1,5 @@
 # ORB_SLAM_Dev
-This repository has the process to setup ORB_SLAM and how to use it.
+This repository has the process to setup ORB_SLAM2 and how to use it.
 
 ## System:
 
@@ -19,6 +19,7 @@ Pre requisites :
  - OpenCV
  - g2o
  - DBoW2
+ - Pangolin
 
 
 
