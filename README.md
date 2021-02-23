@@ -44,10 +44,10 @@ You should be able to see the ORB SLAM2 Working now.
 
 Other examples for 
 
-- Monocular / Stereo/ RGB-D 
+- Monocular / Stereo / RGB-D images
 
-and 
+and,
 
-- KITTI / TUM / EuROC MAV 
+- KITTI / TUM / EuROC MAV datasets
 
-datasets can be found [here](https://github.com/raulmur/ORB_SLAM2).
+can be found [here](https://github.com/raulmur/ORB_SLAM2).
