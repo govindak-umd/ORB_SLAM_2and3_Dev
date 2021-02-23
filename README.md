@@ -1,6 +1,7 @@
 # ORB_SLAM2_Dev
 This repository has the process to setup ORB_SLAM2 and how to use it.
 
+THe official GitHub repository for ORBS-SLAM2 is linked [here](https://github.com/raulmur/ORB_SLAM2).
 ## System:
 
 The below code is tested on:
@@ -41,4 +42,12 @@ Execute the following command. Change TUMX.yaml to TUM1.yaml,TUM2.yaml or TUM3.y
     
 You should be able to see the ORB SLAM2 Working now.
 
+Other examples for 
 
+- Monocular / Stereo/ RGB-D 
+
+and 
+
+- KITTI / TUM / EuROC MAV 
+
+datasets can be found [here](https://github.com/raulmur/ORB_SLAM2).
