@@ -96,8 +96,8 @@ can be found [here](https://github.com/raulmur/ORB_SLAM2).
     $ export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:~/orb_slam2_ws/src/ORB_SLAM2/Examples/ROS
     $ chmod +x build_ros.sh
     $ ./build_ros.sh
-    
-  ## Seting up USB-CAM
+
+ ## Seting up USB-CAM
   
     $ git clone https://github.com/ros-drivers/usb_cam.git
     $ cd src/usb_cam-develop
@@ -124,7 +124,18 @@ to
 Rebuild the ros package:
 
     ./build_ros.sh
+## Stereo Mode example
+
+Open 3 tabs
+
+    $ roscore
+
+From ORB_SLAM2 package, execute:
+
+    $ rosrun ORB_SLAM2 Stereo Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml false
     
+    $ rosbag play --pause /path/to/V1_01_easy.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw
+
 ## Camera callibration
 
 Open 3 tabs
