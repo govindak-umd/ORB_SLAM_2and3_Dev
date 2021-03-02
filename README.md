@@ -1,7 +1,7 @@
 # ORB_SLAM2_Dev
 This repository has the process to setup ORB_SLAM2 and how to use it.
 
-THe official GitHub repository for ORBS-SLAM2 is linked [here](https://github.com/raulmur/ORB_SLAM2).
+The official GitHub repository for ORBS-SLAM2 is linked [here](https://github.com/raulmur/ORB_SLAM2).
 ## System:
 
 The below code is tested on:
@@ -133,7 +133,9 @@ Rebuild the ros package:
 Open 3 tabs
 
     $ roscore
+    
     $ roslaunch usb_cam usb_cam-test.launch 
+    
     $ rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0254 image:=/usb_cam/image_raw camera:=/usb_cam
 
 Run the code and keep moving the checker board until the **Calibrate** button pops blue. 
@@ -161,8 +163,6 @@ Open 4 tabs
 Open 3 tabs
 
     $ roscore
-
-From ORB_SLAM2 package, execute:
 
     $ rosrun ORB_SLAM2 Stereo Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml false
     
