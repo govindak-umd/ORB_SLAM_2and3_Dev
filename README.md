@@ -16,6 +16,7 @@ The below code is tested on:
  - g2o
  - DBoW2
  - Pangolin
+ - Eigen
 
 ## Installation
 
