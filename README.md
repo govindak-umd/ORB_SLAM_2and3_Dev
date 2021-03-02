@@ -120,3 +120,7 @@ Edit **ORB_SLAM2/Example/ROS/ORB_SLAM2/src/ros_mono.cc** from
 to 
 
     ros::Subscriber sub = nodeHandler.subscribe("/usb_cam/image_raw", 1, &ImageGrabber::GrabImage,&igb);
+
+Rebuild the ros package:
+
+    ./build_ros.sh
