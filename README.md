@@ -124,6 +124,18 @@ to
 Rebuild the ros package:
 
     ./build_ros.sh
+## Custom USB-Video example
+
+Open 4 tabs
+
+    $ roscore
+    
+    $ roslaunch usb_cam usb_cam-test.launch
+    
+    $ rosrun ORB_SLAM2 Mono src/ORB_SLAM2/Vocabulary/ORBvoc.txt src/ORB_SLAM2/Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml 
+    
+    $ evo_traj tum KeyFrameTrajectory.txt --plot
+    
 ## Stereo Mode example
 
 Open 3 tabs
