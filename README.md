@@ -124,3 +124,19 @@ to
 Rebuild the ros package:
 
     ./build_ros.sh
+    
+## Camera callibration
+
+Open 3 tabs
+
+    $ roscore
+    $ roslaunch usb_cam usb_cam-test.launch 
+    $ rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0254 image:=/usb_cam/image_raw camera:=/usb_cam
+
+Run the code and keep moving the checker board until the **Calibrate** button pops blue. 
+Click and wait. Hit **save** to get the callibration data stored in the **/tmp** folder.
+
+The callibration data will be saved
+
+
+
