@@ -51,3 +51,72 @@ and,
 - KITTI / TUM / EuROC MAV datasets
 
 can be found [here](https://github.com/raulmur/ORB_SLAM2).
+
+## ROS Installation
+
+    $ mkdir orb_slam2_ws
+    $ cd orb_slam2_ws
+
+    $ mkdir src
+    $ cd src
+    $ catkin_init_workspace
+
+    $ cd ..
+    $ catkin_make
+    $ cd src
+    $ git clone https://github.com/tianchenliu/ORB_SLAM2
+    $ git clone https://github.com/stevenlovegrove/Pangolin
+
+    $ cd Pangolin
+    $ mkdir build
+    $ cd build
+    $ cmake ..
+    $ make
+    $ sudo make install
+    $ cd ..
+
+    $ cd ~/orb_slam2_ws/src/ORB_SLAM2/Thirdparty/DBoW2/
+    $ mkdir build
+    $ cd build
+    $ cmake .. -DCMAKE_BUILD_TYPE=Release
+    $ make
+
+    $ cd ~/orb_slam2_ws/src/ORB_SLAM2/Thirdparty/g2o/
+    $ mkdir build
+    $ cd build
+    $ cmake .. -DCMAKE_BUILD_TYPE=Release
+    $ make
+
+    $ cd ~/orb_slam2_ws/src/ORB_SLAM2
+    $ mkdir build
+    $ cd build
+    $ cmake .. -DROS_BUILD_TYPE=Release
+    $ make
+
+    $ export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:~/orb_slam2_ws/src/ORB_SLAM2/Examples/ROS
+    $ chmod +x build_ros.sh
+    $ ./build_ros.sh
+    
+  ## Seting up USB-CAM
+  
+    $ git clone https://github.com/ros-drivers/usb_cam.git
+    $ cd src/usb_cam-develop
+    $ mkdir build
+    $ cd build
+    $ cmake ..
+    $ make
+    
+  Edit device input (e.g., value=”/dev/video0”) for usb_cam-test.launch file
+  
+  Check where the input is coming from using this 
+  
+    $ ls -ltrh /dev/video*
+    $ ffplay /dev/video0
+    
+Edit **ORB_SLAM2/Example/ROS/ORB_SLAM2/src/ros_mono.cc** from 
+
+    ros::Subscriber sub = nodeHandler.subscribe("/image/image_raw", 1, &ImageGrabber::GrabImage,&igb);
+
+to 
+
+    ros::Subscriber sub = nodeHandler.subscribe("/usb_cam/image_raw", 1, &ImageGrabber::GrabImage,&igb);
