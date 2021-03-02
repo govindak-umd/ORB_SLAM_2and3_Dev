@@ -124,7 +124,27 @@ to
 Rebuild the ros package:
 
     ./build_ros.sh
-## Custom USB-Video example
+###  Install evo package for visualizing SLAM and odometry data
+
+    $ sudo pip install evo --upgrade --no-binary evo
+    
+### Camera calibration
+
+Open 3 tabs
+
+    $ roscore
+    $ roslaunch usb_cam usb_cam-test.launch 
+    $ rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0254 image:=/usb_cam/image_raw camera:=/usb_cam
+
+Run the code and keep moving the checker board until the **Calibrate** button pops blue. 
+Click and wait. Hit **save** to get the callibration data stored in the **/tmp** folder.
+
+The callibration data will be saved
+
+Create a new camera parameter file, in KITTI or TUM format. 
+Refer [this stackoverflow link](https://stackoverflow.com/questions/34023303/opencv-store-camera-matrix-and-distortion-coefficients-as-mat) and [this](http://docs.ros.org/en/api/sensor_msgs/html/msg/CameraInfo.html) for the parameters.
+    
+# Custom USB-Video example
 
 Open 4 tabs
 
@@ -147,20 +167,4 @@ From ORB_SLAM2 package, execute:
     $ rosrun ORB_SLAM2 Stereo Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml false
     
     $ rosbag play --pause /path/to/V1_01_easy.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw
-
-## Camera callibration
-
-Open 3 tabs
-
-    $ roscore
-    $ roslaunch usb_cam usb_cam-test.launch 
-    $ rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0254 image:=/usb_cam/image_raw camera:=/usb_cam
-
-Run the code and keep moving the checker board until the **Calibrate** button pops blue. 
-Click and wait. Hit **save** to get the callibration data stored in the **/tmp** folder.
-
-The callibration data will be saved
-
-Create a new camera parameter file, in KITTI or TUM format. 
-Refer [this stackoverflow link](https://stackoverflow.com/questions/34023303/opencv-store-camera-matrix-and-distortion-coefficients-as-mat) and [this](http://docs.ros.org/en/api/sensor_msgs/html/msg/CameraInfo.html) for the parameters.
 
