@@ -124,7 +124,10 @@ to
 Rebuild the ros package:
 
     ./build_ros.sh
-###  Install evo package for visualizing SLAM and odometry data
+    
+###  Install evo 
+
+The [evo](https://github.com/MichaelGrupp/evo/) package should be installed for visualizing SLAM and odometry data  
 
     $ sudo pip install evo --upgrade --no-binary evo
     
