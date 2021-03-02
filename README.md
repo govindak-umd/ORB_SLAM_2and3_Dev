@@ -149,5 +149,6 @@ Click and wait. Hit **save** to get the callibration data stored in the **/tmp**
 
 The callibration data will be saved
 
-
+Create a new camera parameter file, in KITTI or TUM format. 
+Refer [this stackoverflow link](https://stackoverflow.com/questions/34023303/opencv-store-camera-matrix-and-distortion-coefficients-as-mat) and [this](http://docs.ros.org/en/api/sensor_msgs/html/msg/CameraInfo.html) for the parameters.
 
