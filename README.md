@@ -157,8 +157,18 @@ The callibration data will be saved
 
 Create a new camera parameter file, in KITTI or TUM format. 
 Refer [this stackoverflow link](https://stackoverflow.com/questions/34023303/opencv-store-camera-matrix-and-distortion-coefficients-as-mat) and [this](http://docs.ros.org/en/api/sensor_msgs/html/msg/CameraInfo.html) for the parameters.
-    
-# Custom USB-Video example
+
+## KITTI Dataset Example
+
+Go to ORB_SLAM2 Package and execute:
+
+    $ ./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml Examples/Stereo/kitti_dataset/sequences/00
+
+In KeyFrameTrajectory.txt file, every row has 8 entries containing time stamp (in seconds), position and orientation: 'timestamp x y z q_x q_y q_z q_w'
+
+So to achieve what you want to do, you could for example load the file as a table (similar to a .csv file) and then the columns 2 to 4 are your x, y, z values (or 1 to 3 if you count from 0)
+
+## Custom USB-Video example
 
 Open 4 tabs
 
