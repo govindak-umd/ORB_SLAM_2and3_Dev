@@ -198,3 +198,12 @@ Open a new tab
     
     $ rosbag play --pause /path/to/V1_01_easy.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw
 
+## Converting pointcloud to Occupancy grid
+
+The pointcloud data is stored by the ORBSLAM in a txt file. This can be converted to occupancy grid, visualized in RVIZ and used for robot navigation
+
+Another option is to use pointcloud_to_laserscan package. But LIDAR is always assumed to be noisy, and ORBSLAM uses much more reliable points only. So, this method is not used.
+
+Instead we will try and generate a map from the .txt file.
+
+## Agricultural application
