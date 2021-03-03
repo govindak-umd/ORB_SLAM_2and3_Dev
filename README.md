@@ -174,6 +174,10 @@ In KeyFrameTrajectory.txt file, every row has 8 entries containing time stamp (i
 
 So to achieve what you want to do, you could for example load the file as a table (similar to a .csv file) and then the columns 2 to 4 are your x, y, z values (or 1 to 3 if you count from 0)
 
+To view just the xz plane:
+
+    $ evo_traj kitti CameraTrajectory.txt --plot_mode xz --plot
+
 ## Custom USB-Video example
 
 Open 4 tabs
