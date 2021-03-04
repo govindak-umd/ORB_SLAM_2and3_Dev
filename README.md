@@ -166,7 +166,10 @@ Go to ORB_SLAM2 Package and execute:
 
 To plot the path for the kitti dataset
 
-Open a new tab
+If there are 12 elements per row :
+    $ evo_traj tum KeyFrameTrajectory.txt --plot
+
+If there are 8 elements per row :
 
     $ evo_traj kitti KeyFrameTrajectory.txt --plot
     
