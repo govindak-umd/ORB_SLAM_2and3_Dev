@@ -282,6 +282,8 @@ Group the map.pgm and a new map.yaml file in a folder, **/maps**.
 
     $ mkdir maps
 
+Learn about Map Server [here](http://wiki.ros.org/map_server)
+
     $ catkin_create_pkg map_provider
     
 Put the folder in this package
@@ -290,14 +292,11 @@ Put the folder in this package
     
 Create a new launch file:
 
-    $ gedit maplaunch.launch
-
-Insert the following content in it:
-
-    <launch>
-     <arg name = "map_file" default="$(find map_provider)/maps/testmap.yaml"/>
-     <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)"/>
-    </launch>
+    $ gedit map_custom_server.launch
+    
+    $ gedit map_navigation.launch
+    
+Fill it up as shown in the attached **map_provider/launch** scripts.
 
 Isolate and build this package
 
@@ -305,24 +304,16 @@ Go to **orb_slam2_ws/src/**
 
     $ catkin_make_isolated --pkg map_provider
 
-To run,
-
-    $ roscore
-
-    $ rosrun rviz rviz
-
-    $ roslaunch map_provider maplaunch.launch
-
-Go to RVIZ > Maps > Select /map topic
-
 ## Using TurtleBot3 for Navigation
 
 Add the following line to *.bashrc*
 
 **export TURTLEBOT3_MODEL=burger**
 
-Now, launch turtlebot in an empty world
+To Navigate a TurtleBot3,
 
-    $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch 
-
+    $ roscore
+ 
+    $ roslaunch map_provider map_navigation.launch   
+    
 ## Agricultural application
