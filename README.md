@@ -266,4 +266,14 @@ Run the pointCloudToGridMap2D.py (from opencv environment) and read the *kitti_k
 
 You will now get the .pgm map in the directory.
 
+## Navigating the robot in RVIZ
+
+### Setting up the turtlebot
+
+    $ sudo apt-get install ros-melodic-turtlebot3-*
+
+### Setting up ROS Navigation Stack
+
+    $ sudo apt-get  install ros-melodic-navigation
+
 ## Agricultural application
