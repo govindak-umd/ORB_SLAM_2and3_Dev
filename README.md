@@ -276,7 +276,7 @@ You will now get the .pgm map in the directory.
 
     $ sudo apt-get  install ros-melodic-navigation
 
-### Setting up the YAML Map
+## Setting up the YAML Map
 
 Group the map.pgm and a new map.yaml file in a folder, **/maps**.
 
