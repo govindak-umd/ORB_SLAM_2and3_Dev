@@ -160,6 +160,14 @@ Refer [this stackoverflow link](https://stackoverflow.com/questions/34023303/ope
 
 ## KITTI Dataset Example
 
+To run Mono:
+
+Go to ORB_SLAM2 Package and execute:
+
+    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml Examples/Stereo/kitti_dataset/sequences/00
+    
+To run Stereo:
+
 Go to ORB_SLAM2 Package and execute:
 
     $ ./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml Examples/Stereo/kitti_dataset/sequences/00
@@ -167,6 +175,7 @@ Go to ORB_SLAM2 Package and execute:
 To plot the path for the kitti dataset
 
 If there are 12 elements per row :
+
     $ evo_traj tum KeyFrameTrajectory.txt --plot
 
 If there are 8 elements per row :
@@ -228,5 +237,9 @@ The pointcloud data is stored by the ORBSLAM in a txt file. This can be converte
 Another option is to use pointcloud_to_laserscan package. But LIDAR is always assumed to be noisy, and ORBSLAM uses much more reliable points only. So, this method is not used.
 
 Instead we will try and generate a map from the .txt file.
+
+## Generating the map
+
+Visit [this](https://github.com/abhineet123/ORB_SLAM2/tree/master/Examples/Monocular) repository for reference.
 
 ## Agricultural application
