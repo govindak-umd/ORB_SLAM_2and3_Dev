@@ -276,4 +276,42 @@ You will now get the .pgm map in the directory.
 
     $ sudo apt-get  install ros-melodic-navigation
 
+### Setting up the YAML Map
+
+Group the map.pgm and a new map.yaml file in a folder, **/maps**.
+
+    $ mkdir maps
+
+    $ catkin_create_pkg map_provider
+    
+Put the folder in this package
+
+    $ mkdir launch
+    
+Create a new launch file:
+
+    $ gedit maplaunch.launch
+
+Insert the following content in it:
+
+    <launch>
+     <arg name = "map_file" default="$(find map_provider)/maps/testmap.yaml"/>
+     <node pkg="map_server" type="map_server" name="map_server" args="$(arg map_file)"/>
+    </launch>
+
+Isolate and build this package
+
+Go to **orb_slam2_ws/src/**
+
+    $ catkin_make_isolated --pkg map_provider
+
+To run,
+
+    $ roscore
+
+    $ rosrun rviz rviz
+
+    $ roslaunch map_provider maplaunch.launch
+    
+Go to RVIZ > Maps > Select /map topic
 ## Agricultural application
