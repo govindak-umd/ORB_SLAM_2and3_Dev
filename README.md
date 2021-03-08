@@ -312,8 +312,16 @@ Add the following line to *.bashrc*
 
 To Navigate a TurtleBot3,
 
+Open 3 tabs:
+
     $ roscore
- 
-    $ roslaunch map_provider map_navigation.launch   
+    
+Open a new tab
+
+    $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch 
+    
+Open a new tab
+
+$ roslaunch map_provider map_navigation.launch   
     
 ## Agricultural application
