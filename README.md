@@ -322,6 +322,6 @@ Open a new tab
     
 Open a new tab
 
-$ roslaunch map_provider map_navigation.launch   
+    $ roslaunch map_provider map_navigation.launch   
     
 ## Agricultural application
