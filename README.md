@@ -164,13 +164,13 @@ To run Mono:
 
 Go to ORB_SLAM2 Package and execute:
 
-    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml Examples/Stereo/kitti_dataset/sequences/00
+    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml kitti_dataset/sequences/00
     
 To run Stereo:
 
 Go to ORB_SLAM2 Package and execute:
 
-    $ ./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml Examples/Stereo/kitti_dataset/sequences/00
+    $ ./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml kitti_dataset/sequences/00
 
 To plot the path for the kitti dataset
 
