@@ -242,4 +242,28 @@ Instead we will try and generate a map from the .txt file.
 
 Visit [this](https://github.com/abhineet123/ORB_SLAM2/tree/master/Examples/Monocular) repository for reference.
 
+Steps to be done are:
+
+Replace the following files (after observing the content)
+
+- System.h (add #include <unistd.h> into **System.h**)
+- System.cc
+- Map.h
+- Map.cc
+
+Rebuild the ros package:
+
+    ./build_ros.sh
+
+Run the kitti test again 
+
+    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml kitti_dataset/sequences/00
+
+Run the pointCloudToGridMap2D.py (from opencv environment) and read the *kitti_key_frame_trajectory.py* and *kitti_map_pts_and_keyframes*.
+
+
+    $ python pcl2pgm.py 
+
+You will now get the .pgm map in the directory.
+
 ## Agricultural application
