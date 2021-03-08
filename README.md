@@ -312,6 +312,17 @@ To run,
     $ rosrun rviz rviz
 
     $ roslaunch map_provider maplaunch.launch
-    
+
 Go to RVIZ > Maps > Select /map topic
+
+## Using TurtleBot3 for Navigation
+
+Add the following line to *.bashrc*
+
+**export TURTLEBOT3_MODEL=burger**
+
+Now, launch turtlebot in an empty world
+
+    $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch 
+
 ## Agricultural application
