@@ -322,6 +322,8 @@ Open a new tab
     
 Open a new tab
 
+    $ cd orb_slam2_ws/
+    $ source devel/setup.bash
     $ roslaunch map_provider map_navigation.launch   
     
 ## Agricultural application
