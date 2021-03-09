@@ -164,13 +164,13 @@ To run Mono:
 
 Go to ORB_SLAM2 Package and execute:
 
-    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml kitti_dataset/sequences/00
+    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
     
 To run Stereo:
 
 Go to ORB_SLAM2 Package and execute:
 
-    $ ./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml kitti_dataset/sequences/00
+    $ ./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
 
 To plot the path for the kitti dataset
 
@@ -259,7 +259,7 @@ Rebuild the ros package:
 
 Run the kitti test again 
 
-    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml kitti_dataset/sequences/00
+    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
 
 Run the pointCloudToGridMap2D.py (from opencv environment) and read the *kitti_key_frame_trajectory.py* and *kitti_map_pts_and_keyframes*.
 
