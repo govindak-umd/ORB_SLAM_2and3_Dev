@@ -190,7 +190,9 @@ To view just the xz plane:
 
     $ evo_traj kitti CameraTrajectory.txt --plot_mode xz --plot
 
-## Custom USB-Video example
+## Custom USB-Video File Example
+
+## Custom USB-Video Feed example
 
 Open 4 tabs
 
@@ -212,7 +214,7 @@ Open a new tab
 
     $ evo_traj tum KeyFrameTrajectory.txt --plot
     
-## Stereo Mode example
+## Stereo Mode ROS BAG example
 
 Open 3 tabs
 
