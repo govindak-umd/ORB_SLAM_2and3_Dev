@@ -192,14 +192,22 @@ To view just the xz plane:
 
 ## Custom USB-Video File Example
 
-This might get a bit tricky. The important things are:
+The steps to be followed to prepare the dataset are:
 
 - Record the video using the *capture_video.py*.
-- Once recorded, generate the sequences. This can be done using the *video2sequences.py* script.
-- This script also generates the timestamp file, *times.txt*.
-- Put the sequences in *datasets/my_dataset/sequences/XX/image_0"* folder.
+- Once recorded, generate the sequences. This can be done using the *video2sequences.py* script. Note that the sequences are named as per Kitti requirements.
+- This script also generates the timestamp file, *times.txt*. This is also a Kitti requirement.
+- Put the sequences in *datasets/my_dataset/sequences/XX/image_0"* folder. Here XX is the sequence number
 - Now, paste the generated timestamp in the *datasets/my_dataset/sequences/XX/* folder.
-- Beside this paste the *calib.txt* file. To generate this, refer to the *Examples/Monocular/KITTI00-02.yaml* and *Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml*.
+- Beside this paste the *calib.txt* file. To generate this, refer to the *Examples/Monocular/KITTI00-02.yaml* and *Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml*. This is a Kitti requriement as well.
+
+Now, you can run it as follows:
+
+    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml datasets/my_dataset/sequences/00
+
+Generate the map as follows:
+
+    $ python pcl2pgm.py
 
 ## Custom USB-Video Feed example
 
