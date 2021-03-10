@@ -192,6 +192,15 @@ To view just the xz plane:
 
 ## Custom USB-Video File Example
 
+This might get a bit tricky. The important things are:
+
+- Record the video using the *capture_video.py*.
+- Once recorded, generate the sequences. This can be done using the *video2sequences.py* script.
+- This script also generates the timestamp file, *times.txt*.
+- Put the sequences in *datasets/my_dataset/sequences/XX/image_0"* folder.
+- Now, paste the generated timestamp in the *datasets/my_dataset/sequences/XX/* folder.
+- Beside this paste the *calib.txt* file. To generate this, refer to the *Examples/Monocular/KITTI00-02.yaml* and *Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml*.
+
 ## Custom USB-Video Feed example
 
 Open 4 tabs
