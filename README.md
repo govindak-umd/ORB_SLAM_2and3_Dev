@@ -4,7 +4,7 @@ This repository has the process to setup ORB_SLAM2 and how to use it.
 The official GitHub repository for ORBS-SLAM2 is linked [here](https://github.com/raulmur/ORB_SLAM2).
 ## System:
 
-The below code is tested on:
+The code below is tested on:
 
  - Ubuntu 18.05 LTS
  - NVIDIA GTX 950M
