@@ -280,8 +280,9 @@ Run the kitti test again using the Monocular camera Example folder
 
     $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
 
-Run the pointCloudToGridMap2D.py (from opencv environment) and read the *kitti_key_frame_trajectory.py* and *kitti_map_pts_and_keyframes*.
+You can either view this as a map using the **evo** package, as described in the above examples, or run the pointCloudToGridMap2D.py (from opencv environment) and read the *kitti_key_frame_trajectory.py* and *kitti_map_pts_and_keyframes*.
 
+The second approach will provide us with the map file, to be used in RViz:
 
     $ python pcl2pgm.py 
 
