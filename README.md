@@ -230,7 +230,9 @@ Open a new tab
 Open a new tab
 
     $ evo_traj tum KeyFrameTrajectory.txt --plot
-    
+
+While this is an accurate map, the map will be scaled. To get the original map, go [here](http://www.cvlibs.net/datasets/kitti/eval_odometry.php) and download the odometry ground truth poses (4 MB). You can plot this using **evo_traj** as well.
+
 ## Stereo Mode ROS BAG example
 
 Open 3 tabs
