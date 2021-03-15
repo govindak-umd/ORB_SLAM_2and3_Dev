@@ -176,11 +176,11 @@ To plot the path for the kitti dataset
 
 If there are 12 elements per row :
 
-    $ evo_traj tum kitti_key_frame_trajectory.txt --plot
+    $ evo_traj kitti KeyFrameTrajectory.txt --plot
 
 If there are 8 elements per row :
 
-    $ evo_traj kitti KeyFrameTrajectory.txt --plot
+    $ evo_traj tum KeyFrameTrajectory.txt --plot
     
 In KeyFrameTrajectory.txt file, every row has 8 entries containing time stamp (in seconds), position and orientation: 'timestamp x y z q_x q_y q_z q_w'
 
@@ -189,6 +189,10 @@ So to achieve what you want to do, you could for example load the file as a tabl
 To view just the xz plane:
 
     $ evo_traj tum kitti_key_frame_trajectory.txt --plot_mode xz --plot
+
+To view multiple trajectories in one go:
+
+    $ evo_traj tum trajectory_1.txt trajectory_2.txt --plot_mode xz --plot
 
 ## Custom USB-Video File Example
 
@@ -280,7 +284,11 @@ Run the kitti test again using the Monocular camera Example folder
 
     $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
 
-You can either view this as a map using the **evo** package, as described in the above examples, or run the pointCloudToGridMap2D.py (from opencv environment) and read the *kitti_key_frame_trajectory.py* and *kitti_map_pts_and_keyframes*.
+You can either view this as a map using the **evo** package, as described in the above examples. However, the trajectories are now saved in TUM format. Hence, to visualize these kitti trajectories, execute:
+
+    $ evo_traj tum kitti_key_frame_trajectory.txt data--plot_mode xz --plot
+
+*or* run the pointCloudToGridMap2D.py (from opencv environment) and read the *kitti_key_frame_trajectory.py* and *kitti_map_pts_and_keyframes*.
 
 The second approach will provide us with the map file, to be used in RViz:
 
