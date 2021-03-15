@@ -176,7 +176,7 @@ To plot the path for the kitti dataset
 
 If there are 12 elements per row :
 
-    $ evo_traj tum KeyFrameTrajectory.txt --plot
+    $ evo_traj tum kitti_key_frame_trajectory.txt --plot
 
 If there are 8 elements per row :
 
@@ -188,7 +188,7 @@ So to achieve what you want to do, you could for example load the file as a tabl
 
 To view just the xz plane:
 
-    $ evo_traj kitti CameraTrajectory.txt --plot_mode xz --plot
+    $ evo_traj tum kitti_key_frame_trajectory.txt --plot_mode xz --plot
 
 ## Custom USB-Video File Example
 
