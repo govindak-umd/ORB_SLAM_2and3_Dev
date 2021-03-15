@@ -164,7 +164,7 @@ To run Mono:
 
 Go to ORB_SLAM2 Package and execute:
 
-    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
+    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
     
 To run Stereo:
 
