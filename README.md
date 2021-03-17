@@ -371,4 +371,12 @@ Test Installation:
 
     $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml ../Lite_ORB_SLAM2/datasets/kitti_dataset/sequences/00
 
+To test ORB SLAM-2 on the custom dataset, a change has to be made on the camera setup yaml file:
 
+The updated file has been uploaded here as *nexigo_cam_orb_slam_3.yaml*.
+
+THe changes are:
+
+- Add camera width param
+- Add camera heigh param
+- Add camera type - 'pinhole'
