@@ -22,10 +22,10 @@ The code below is tested on:
 
 Once these are installed, go to your home folder and run the following commands
 
-    $ git clone https://github.com/raulmur/ORB_SLAM2.git
-    $ cd ORB_SLAM2
-    $ chmod +x build.sh
-    $ ./build.sh
+    git clone https://github.com/raulmur/ORB_SLAM2.git
+    cd ORB_SLAM2
+    chmod +x build.sh
+    ./build.sh
 
 A compile issue might arise here. Go to the **/include** folder and add 
 
@@ -39,7 +39,7 @@ Download a sequence from http://vision.in.tum.de/data/datasets/rgbd-dataset/down
 
 Execute the following command. Change TUMX.yaml to TUM1.yaml,TUM2.yaml or TUM3.yaml for freiburg1, freiburg2 and freiburg3 sequences respectively. Change PATH_TO_SEQUENCE_FOLDER to the uncompressed sequence folder.
 
-    $ ./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt Examples/Monocular/TUM1.yaml ~/Downloads/rgbd_dataset_freiburg1_rpy/
+    ./Examples/Monocular/mono_tum Vocabulary/ORBvoc.txt Examples/Monocular/TUM1.yaml ~/Downloads/rgbd_dataset_freiburg1_rpy/
     
 You should be able to see the ORB SLAM2 Working now.
 
@@ -55,64 +55,64 @@ can be found [here](https://github.com/raulmur/ORB_SLAM2).
 
 ## ROS Installation
 
-    $ mkdir orb_slam2_ws
-    $ cd orb_slam2_ws
+    mkdir orb_slam2_ws
+    cd orb_slam2_ws
 
-    $ mkdir src
-    $ cd src
-    $ catkin_init_workspace
+    mkdir src
+    cd src
+    catkin_init_workspace
 
-    $ cd ..
-    $ catkin_make
-    $ cd src
-    $ git clone https://github.com/tianchenliu/ORB_SLAM2
-    $ git clone https://github.com/stevenlovegrove/Pangolin
+    cd ..
+    catkin_make
+    cd src
+    git clone https://github.com/tianchenliu/ORB_SLAM2
+    git clone https://github.com/stevenlovegrove/Pangolin
 
-    $ cd Pangolin
-    $ mkdir build
-    $ cd build
-    $ cmake ..
-    $ make
-    $ sudo make install
-    $ cd ..
+    cd Pangolin
+    mkdir build
+    cd build
+    cmake ..
+    make
+    sudo make install
+    cd ..
 
-    $ cd ~/orb_slam2_ws/src/ORB_SLAM2/Thirdparty/DBoW2/
-    $ mkdir build
-    $ cd build
-    $ cmake .. -DCMAKE_BUILD_TYPE=Release
-    $ make
+    cd ~/orb_slam2_ws/src/ORB_SLAM2/Thirdparty/DBoW2/
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Release
+    make
 
-    $ cd ~/orb_slam2_ws/src/ORB_SLAM2/Thirdparty/g2o/
-    $ mkdir build
-    $ cd build
-    $ cmake .. -DCMAKE_BUILD_TYPE=Release
-    $ make
+    cd ~/orb_slam2_ws/src/ORB_SLAM2/Thirdparty/g2o/
+    mkdir build
+    cd build
+    cmake .. -DCMAKE_BUILD_TYPE=Release
+    make
 
-    $ cd ~/orb_slam2_ws/src/ORB_SLAM2
-    $ mkdir build
-    $ cd build
-    $ cmake .. -DROS_BUILD_TYPE=Release
-    $ make
+    cd ~/orb_slam2_ws/src/ORB_SLAM2
+    mkdir build
+    cd build
+    cmake .. -DROS_BUILD_TYPE=Release
+    make
 
-    $ export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:~/orb_slam2_ws/src/ORB_SLAM2/Examples/ROS
-    $ chmod +x build_ros.sh
-    $ ./build_ros.sh
+    export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:~/orb_slam2_ws/src/ORB_SLAM2/Examples/ROS
+    chmod +x build_ros.sh
+    ./build_ros.sh
 
  ## Seting up USB-CAM
   
-    $ git clone https://github.com/ros-drivers/usb_cam.git
-    $ cd src/usb_cam-develop
-    $ mkdir build
-    $ cd build
-    $ cmake ..
-    $ make
+    git clone https://github.com/ros-drivers/usb_cam.git
+    cd src/usb_cam-develop
+    mkdir build
+    cd build
+    cmake ..
+    make
     
   Edit device input (e.g., value=”/dev/video0”) for usb_cam-test.launch file
   
   Check where the input is coming from using this 
   
-    $ ls -ltrh /dev/video*
-    $ ffplay /dev/video0
+    ls -ltrh /dev/video*
+    ffplay /dev/video0
     
 Edit **ORB_SLAM2/Example/ROS/ORB_SLAM2/src/ros_mono.cc** from 
 
@@ -130,25 +130,25 @@ Rebuild the ros package:
 
 The [evo](https://github.com/MichaelGrupp/evo/) package should be installed for visualizing SLAM and odometry data  
 
-    $ sudo pip install evo --upgrade --no-binary evo
+    sudo pip install evo --upgrade --no-binary evo
     
 ### Camera calibration
 
 Open 3 tabs
 
-    $ roscore
+    roscore
     
 Open a new tab
 
-    $ source devel/setup.bash
+    source devel/setup.bash
     
-    $ roslaunch usb_cam usb_cam-test.launch 
+    roslaunch usb_cam usb_cam-test.launch 
     
 Open a new tab
 
-    $ source devel/setup.bash
+    source devel/setup.bash
     
-    $ rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0254 image:=/usb_cam/image_raw camera:=/usb_cam
+    rosrun camera_calibration cameracalibrator.py --size 8x6 --square 0.0254 image:=/usb_cam/image_raw camera:=/usb_cam
 
 Run the code and keep moving the checker board until the **Calibrate** button pops blue. 
 Click and wait. Hit **save** to get the callibration data stored in the **/tmp** folder.
@@ -164,23 +164,23 @@ To run Mono:
 
 Go to ORB_SLAM2 Package and execute:
 
-    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
+    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
     
 To run Stereo:
 
 Go to ORB_SLAM2 Package and execute:
 
-    $ ./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
+    ./Examples/Stereo/stereo_kitti Vocabulary/ORBvoc.txt Examples/Stereo/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
 
 To plot the path for the kitti dataset
 
 If there are 12 elements per row :
 
-    $ evo_traj kitti KeyFrameTrajectory.txt --plot
+    evo_traj kitti KeyFrameTrajectory.txt --plot
 
 If there are 8 elements per row :
 
-    $ evo_traj tum KeyFrameTrajectory.txt --plot
+    evo_traj tum KeyFrameTrajectory.txt --plot
     
 In KeyFrameTrajectory.txt file, every row has 8 entries containing time stamp (in seconds), position and orientation: 'timestamp x y z q_x q_y q_z q_w'
 
@@ -188,11 +188,11 @@ So to achieve what you want to do, you could for example load the file as a tabl
 
 To view just the xz plane:
 
-    $ evo_traj tum kitti_key_frame_trajectory.txt --plot_mode xz --plot
+    evo_traj tum kitti_key_frame_trajectory.txt --plot_mode xz --plot
 
 To view multiple trajectories in one go:
 
-    $ evo_traj tum trajectory_1.txt trajectory_2.txt --plot_mode xz --plot
+    evo_traj tum trajectory_1.txt trajectory_2.txt --plot_mode xz --plot
 
 ## Custom USB-Video File Example
 
@@ -207,33 +207,33 @@ The steps to be followed to prepare the dataset are:
 
 Now, you can run it as follows:
 
-    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml datasets/my_dataset/sequences/00
+    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml datasets/my_dataset/sequences/00
 
 Generate the map as follows:
 
-    $ python pcl2pgm.py
+    python pcl2pgm.py
 
 ## Custom USB-Video Feed example
 
 Open 4 tabs
 
-    $ roscore
+    roscore
     
 Open a new tab
 
-    $ source devel/setup.bash
+    source devel/setup.bash
 
-    $ roslaunch usb_cam usb_cam-test.launch
+    roslaunch usb_cam usb_cam-test.launch
     
 Open a new tab
 
-    $ source devel/setup.bash
+    source devel/setup.bash
     
-    $ rosrun ORB_SLAM2 Mono src/ORB_SLAM2/Vocabulary/ORBvoc.txt src/ORB_SLAM2/Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml 
+    rosrun ORB_SLAM2 Mono src/ORB_SLAM2/Vocabulary/ORBvoc.txt src/ORB_SLAM2/Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml 
     
 Open a new tab
 
-    $ evo_traj tum KeyFrameTrajectory.txt --plot
+    evo_traj tum KeyFrameTrajectory.txt --plot
 
 While this is an accurate map, the map will be scaled. To get the original map, go [here](http://www.cvlibs.net/datasets/kitti/eval_odometry.php) and download the odometry ground truth poses (4 MB). You can plot this using **evo_traj** as well.
 
@@ -241,19 +241,19 @@ While this is an accurate map, the map will be scaled. To get the original map, 
 
 Open 3 tabs
 
-    $ roscore
+    roscore
     
 Open a new tab
 
-    $ source devel/setup.bash
+    source devel/setup.bash
 
-    $ rosrun ORB_SLAM2 Stereo Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml false
+    rosrun ORB_SLAM2 Stereo Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml false
     
 Open a new tab
 
-    $ source devel/setup.bash
+    source devel/setup.bash
     
-    $ rosbag play --pause /path/to/V1_01_easy.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw
+    rosbag play --pause /path/to/V1_01_easy.bag /cam0/image_raw:=/camera/left/image_raw /cam1/image_raw:=/camera/right/image_raw
 
 ## Converting pointcloud to Occupancy grid
 
@@ -282,17 +282,17 @@ Rebuild the ros package:
 
 Run the kitti test again using the Monocular camera Example folder
 
-    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
+    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml datasets/kitti_dataset/sequences/00
 
 You can either view this as a map using the **evo** package, as described in the above examples. However, the trajectories are now saved in TUM format. Hence, to visualize these kitti trajectories, execute:
 
-    $ evo_traj tum kitti_key_frame_trajectory.txt data--plot_mode xz --plot
+    evo_traj tum kitti_key_frame_trajectory.txt data--plot_mode xz --plot
 
 *or* run the pointCloudToGridMap2D.py (from opencv environment) and read the *kitti_key_frame_trajectory.py* and *kitti_map_pts_and_keyframes*.
 
 The second approach will provide us with the map file, to be used in RViz:
 
-    $ python pcl2pgm.py 
+    python pcl2pgm.py 
 
 You will now get the .pgm map in the directory.
 
@@ -300,31 +300,31 @@ You will now get the .pgm map in the directory.
 
 ### Setting up the turtlebot
 
-    $ sudo apt-get install ros-melodic-turtlebot3-*
+    sudo apt-get install ros-melodic-turtlebot3-*
 
 ### Setting up ROS Navigation Stack
 
-    $ sudo apt-get  install ros-melodic-navigation
+    sudo apt-get  install ros-melodic-navigation
 
 ## Setting up the YAML Map
 
 Group the map.pgm and a new map.yaml file in a folder, **/maps**.
 
-    $ mkdir maps
+    mkdir maps
 
 Learn about Map Server [here](http://wiki.ros.org/map_server)
 
-    $ catkin_create_pkg map_provider
+    catkin_create_pkg map_provider
     
 Put the folder in this package
 
-    $ mkdir launch
+    mkdir launch
     
 Create a new launch file:
 
-    $ gedit map_custom_server.launch
+    gedit map_custom_server.launch
     
-    $ gedit map_navigation.launch
+    gedit map_navigation.launch
     
 Fill it up as shown in the attached **map_provider/launch** scripts.
 
@@ -332,7 +332,7 @@ Isolate and build this package
 
 Go to **orb_slam2_ws/src/**
 
-    $ catkin_make_isolated --pkg map_provider
+    catkin_make_isolated --pkg map_provider
 
 ## Using TurtleBot3 for Navigation
 
@@ -344,32 +344,33 @@ To Navigate a TurtleBot3,
 
 Open 3 tabs:
 
-    $ roscore
+    roscore
     
 Open a new tab
 
-    $ roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch 
+    roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch 
     
 Open a new tab
 
-    $ cd orb_slam2_ws/
-    $ source devel/setup.bash
-    $ roslaunch map_provider map_navigation.launch   
+    cd orb_slam2_ws/
+    source devel/setup.bash
+    roslaunch map_provider map_navigation.launch   
+    
 ## Agricultural application
 
 ## ORB_SLAM3_Installation and Test
 
 Make sure all the pre-requisites of ORB_SLAM_2 are met, before running the following commands
 
-    $ cd ~/orb_Slam2_ws/src
-    $ git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
-    $ cd ORB_SLAM3
-    $ chmod +x build.sh
-    $ ./build.sh
+    cd ~/orb_Slam2_ws/src
+    git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
+    cd ORB_SLAM3
+    chmod +x build.sh
+    ./build.sh
     
 Test Installation:
 
-    $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml ../Lite_ORB_SLAM2/datasets/kitti_dataset/sequences/00
+    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml ../Lite_ORB_SLAM2/datasets/kitti_dataset/sequences/00
 
 To test ORB SLAM-2 on the custom dataset, a change has to be made on the camera setup yaml file:
 
@@ -380,3 +381,8 @@ THe changes are:
 - Add camera width param
 - Add camera heigh param
 - Add camera type - 'pinhole'
+
+The new map is saved as KeyFrameTrajectory.txt and can be seen with
+
+    evo_traj tum KeyFrameTrajectory.txt --plot
+
