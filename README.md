@@ -355,8 +355,11 @@ Open a new tab
     $ cd orb_slam2_ws/
     $ source devel/setup.bash
     $ roslaunch map_provider map_navigation.launch   
+## Agricultural application
 
-## ORB_sLAM3_Test
+## ORB_SLAM3_Installation and Test
+
+Make sure all the pre-requisites of ORB_SLAM_2 are met, before running the following commands
 
     $ cd ~/orb_Slam2_ws/src
     $ git clone https://github.com/UZ-SLAMLab/ORB_SLAM3.git
@@ -368,4 +371,4 @@ Test Installation:
 
     $ ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml ../Lite_ORB_SLAM2/datasets/kitti_dataset/sequences/00
 
-## Agricultural application
+
