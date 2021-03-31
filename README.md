@@ -386,7 +386,15 @@ Perform ORB-SLAM3 on a custom dataset with the following command:
 
     ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt nexigo_cam_orb_slam_3.yaml ../Lite_ORB_SLAM2/datasets/my_dataset/sequences/09
 
-The new map is saved as KeyFrameTrajectory.txt and can be seen with
+View the elevation predictions made:
+
+    evo_traj tum KeyFrameTrajectory.txt --plot_mode xy --plot
+
+View the top down plot:
+
+    evo_traj tum KeyFrameTrajectory.txt --plot_mode xz --plot
+
+Else view the overall plot by:
 
     evo_traj tum KeyFrameTrajectory.txt --plot
 
