@@ -382,6 +382,10 @@ The changes are:
 - Add camera height param
 - Add camera type - 'pinhole'
 
+Perform ORB-SLAM3 on a custom dataset with the following command:
+
+    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt nexigo_cam_orb_slam_3.yaml ../Lite_ORB_SLAM2/datasets/my_dataset/sequences/09
+
 The new map is saved as KeyFrameTrajectory.txt and can be seen with
 
     evo_traj tum KeyFrameTrajectory.txt --plot
