@@ -1,7 +1,10 @@
 # Setting up of ORB-SLAM2 and ORB-SLAM3
-This repository has the process to setup ORB_SLAM2 and how to use it.
+This repository has the process to setup ORB_SLAM2 and ORB_SLAM3 and how to use it.
 
 The official GitHub repository for ORBS-SLAM2 is linked [here](https://github.com/raulmur/ORB_SLAM2).
+
+The official GitHub repository for ORBS-SLAM3 is linked [here](https://github.com/UZ-SLAMLab/ORB_SLAM3).
+
 ## System:
 
 The code below is tested on:
