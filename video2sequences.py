@@ -1,6 +1,8 @@
 import cv2
+import os
 
-video_name = "video_2"
+video_name = "video_11"
+os.mkdir(video_name)
 # Read the video
 vidcap = cv2.VideoCapture(video_name+'.avi')
 def getFrame(sec):
