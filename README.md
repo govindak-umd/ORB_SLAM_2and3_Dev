@@ -395,7 +395,7 @@ The changes are:
 
 Perform ORB-SLAM3 on a custom dataset with the following command:
 
-    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt nexigo_cam_orb_slam_3.yaml ../Lite_ORB_SLAM2/datasets/my_dataset/sequences/09
+    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt nexigo_cam_orb_slam_3.yaml datasets/my_dataset/sequences/09
 
 View the elevation predictions made:
 
