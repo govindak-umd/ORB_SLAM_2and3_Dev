@@ -212,13 +212,13 @@ The steps to be followed to prepare the dataset are:
 - Record the video using the *capture_video.py*.
 - Once recorded, generate the sequences. This can be done using the *video2sequences.py* script. Note that the sequences are named as per Kitti requirements.
 - This script also generates the timestamp file, *times.txt*. This is also a Kitti requirement.
-- Put the sequences in *datasets/my_dataset/sequences/XX/image_0"* folder. Here XX is the sequence number
-- Now, paste the generated timestamp in the *datasets/my_dataset/sequences/XX/* folder.
+- Put the sequences in *datasets/urban_dataset/sequences/XX/image_0"* folder. Here XX is the sequence number
+- Now, paste the generated timestamp in the *datasets/urban_dataset/sequences/XX/* folder.
 - Beside this paste the *calib.txt* file. To generate this, refer to the *Examples/Monocular/KITTI00-02.yaml* and *Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml*. This is a Kitti requriement as well.
 
 Now, you can run it as follows:
 
-    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml datasets/my_dataset/sequences/00
+    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/nexigo_callibration_data/nexigo_cam.yaml datasets/urban_dataset/sequences/00
 
 Generate the map as follows:
 
@@ -369,6 +369,8 @@ Open a new tab
     
 ## Agricultural application
 
+You can also access the agriculture dataset, by substituting ```urban_dataset``` with ```ag_dataset```.
+
 ## ORB_SLAM3_Installation and Test
 
 Make sure all the pre-requisites of ORB_SLAM_2 are met, before running the following commands
@@ -395,7 +397,7 @@ The changes are:
 
 Perform ORB-SLAM3 on a custom dataset with the following command:
 
-    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt nexigo_cam_orb_slam_3.yaml datasets/my_dataset/sequences/09
+    ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt nexigo_cam_orb_slam_3.yaml datasets/urban_dataset/sequences/09
 
 View the elevation predictions made:
 
@@ -409,3 +411,11 @@ Else view the overall plot by:
 
     evo_traj tum KeyFrameTrajectory.txt --plot
 
+## References
+
+Here are some important links for this project:
+
+- [Urban Dataset]()
+- [Agriculture Dataset]()
+- [Camera Calibration Data]()
+- [ORB-SLAM 2 and ORB-SLAM 3 Workspace]()
